@@ -78,9 +78,9 @@ $ns flush-trace
 close $ntrace
 close $namfile
 
-#exec awk -f ftp.awk out.tr > temp1
+exec awk -f ftp.awk out.tr > temp1
 
-#exec awk -f telnet.awk out.tr > temp2
+exec awk -f telnet.awk out.tr > temp2
 
 #Execute the nam animation file
 exec nam out.nam &

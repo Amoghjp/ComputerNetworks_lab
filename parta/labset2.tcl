@@ -10,7 +10,7 @@ $ns flush-trace
 close $tf
 close $nf
 exec nam cn3.nam &
-exec awk -f cn1awk.awk cn3.tr &
+exec awk -f lab2.awk cn3.tr &
 exit 0
 }
 

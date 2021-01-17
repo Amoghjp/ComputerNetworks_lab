@@ -68,7 +68,7 @@ $err set rate_ 0.2
 set ftp0 [new Application/FTP]
 $ftp0 attach-agent $tcp0
 $ns at 1.0 "$ftp0 start"
-$ns at 10.0 "$ftp0 stop"
+$ns at 5.0 "$ftp0 stop"
 
 #Attach CBR Application over UDP
 set cbr1 [new Application/Traffic/CBR]
@@ -78,7 +78,7 @@ $cbr1 set rate_ 1.0Mb
 $cbr1 set random_ null
 
 $ns at 1.0 "$cbr1 start"
-$ns at 10.0 "$cbr1 stop"
+$ns at 5.0 "$cbr1 stop"
 
 #Finish Procedure
 proc finish {} {
@@ -87,7 +87,7 @@ $ns flush-trace
 close $tracefile
 close $namfile
 
-#exec awk -f 4.awk out.tr
+exec awk -f lab4.awk out.tr
 #Execute the nam animation file
 exec nam out.nam &
 exit 0

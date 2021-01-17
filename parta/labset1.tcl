@@ -9,7 +9,7 @@ $ns flush-trace
 close $tf
 close $nf
 exec nam cn1.nam &
-exec awk -f cn1awk.awk cn1.tr &
+exec awk -f lab1.awk cn1.tr &
 exit 0
 }
 set n0 [$ns node]
